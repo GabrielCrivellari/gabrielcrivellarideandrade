@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Pessoal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        header {
+            background-color: #e9a433;
+            color: #fff;
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        section {
+            padding: 20px;
+            display: none;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        section.active {
+            display: block;
+        }
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            box-sizing: border-box;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        input[type="submit"] {
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+        .contact-info {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .contact-info p {
+            margin: 10px 0;
+        }
+        .contact-info a {
+            color: #e9a433;
+            text-decoration: none;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Meu Portfólio</h1>
+        <nav>
+            <ul>
+                <li><a href="#sobre" onclick="showSection('sobre')">Sobre Mim</a></li>
+                <li><a href="#formacao" onclick="showSection('formacao')">Formação Educacional e Idiomas</a></li>
+                <li><a href="#portfolio" onclick="showSection('portfolio')">Portfólio</a></li>
+                <li><a href="#contato" onclick="showSection('contato')">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="sobre" class="active">
+        <h2>Quem Sou Eu</h2>
+        <p>Olá! Tenho 21 anos de idade, tenho sede em aprender coisas novas e ir além. Sou
+            prestativo, organizado, tenho facilidade em me adaptar as mudanças. Além disso, sou
+            proativo na resolução de problemas. 
+            </p>
+        <h2></h2>
+
+        <img src="imagens/perfil.jpg" alt="" title="" width="50%" height="30%">
+        <br>
+    </section>
+
+    <section id="formacao">
+        <h2>Minha Formação</h2>
+        <p>- Ensino Médio Completo
+        <p>- Curso de pacote office 365
+        <p>- Curso de designer gráfico (Canva e Corel Draw)
+        </p>
+    </section>
+
+    <section id="portfolio">
+        <h2>Meus Projetos</h2>
+        <p>Inclua aqui links para outros sites ou projetos que você desenvolveu no curso.</p>
+    </section>
+
+    <section id="contato">
+        <div class="contact-info">
+            <h2>Informações de Contato</h2>
+            <p>Você pode me encontrar nos seguintes canais:</p>
+            <p><strong>Email:</strong> gabrielcrivellari92@gmail.com</p>
+            <p><strong>Telefone:</strong> (27) 99607-3153</p>
+            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/seuperfil" target="_blank">seuperfil</a></p>
+            <p><strong>GitHub:</strong> <a href="https://github.com/seuperfil" target="_blank">seuperfil</a></p>
+        </div>
+        <h2>Fale Comigo</h2>
+        <form action="#" method="post">
+            <label for="nome">Nome:</label><br>
+            <input type="text" id="nome" name="nome" required><br><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="mensagem">Mensagem:</label><br>
+            <textarea id="mensagem" name="mensagem" rows="4" required></textarea><br><br>
+            <input type="submit" value="Enviar">
+        </form>
+    </section>
+
+    <script>
+        function showSection(sectionId) {
+            // Oculta todas as seções
+            var sections = document.querySelectorAll('section');
+            sections.forEach(function(section) {
+                section.classList.remove('active');
+            });
+
+            // Mostra a seção selecionada
+            var selectedSection = document.getElementById(sectionId);
+            selectedSection.classList.add('active');
+        }
+    </script>
+</body>
+</html>
